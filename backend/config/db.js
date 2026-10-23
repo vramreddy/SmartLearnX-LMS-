@@ -8,10 +8,23 @@ export const connectDB = async () => {
     return;
   }
 
-  try {
-    await mongoose.connect(mongoUri);
-    console.log("DB connected successfully to MongoDB Atlas");
-  } catch (error) {
-    console.error("DB connection error:", error.message || error);
+  // Retry connection up to 3 times with exponential backoff
+  const MAX_RETRIES = 3;
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      await mongoose.connect(mongoUri, {
+        serverSelectionTimeoutMS: 10000, // 10s timeout
+      });
+      console.log("DB connected successfully to MongoDB Atlas");
+      return; // success
+    } catch (error) {
+      console.error(`DB connection attempt ${attempt}/${MAX_RETRIES} failed:`, error.message || error);
+      if (attempt < MAX_RETRIES) {
+        const delay = attempt * 2000; // 2s, 4s backoff
+        console.log(`Retrying in ${delay / 1000}s...`);
+        await new Promise((resolve) => setTimeout(resolve, delay));
+      }
+    }
   }
+  console.error("All DB connection attempts failed. Server will continue but DB operations will fail.");
 };

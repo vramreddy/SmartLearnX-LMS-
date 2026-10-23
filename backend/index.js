@@ -11,7 +11,7 @@ const port = process.env.PORT || 4000;
 
 // Middleware
 const allowedOrigins = process.env.ALLOWED_ORIGINS
-  ? process.env.ALLOWED_ORIGINS.split(",")
+  ? process.env.ALLOWED_ORIGINS.split(",").map((s) => s.trim())
   : [];
 
 app.use(
@@ -38,9 +38,6 @@ app.use(clerkMiddleware());
 // Serve uploads
 app.use("/uploads", express.static("uploads"));
 
-// Database
-connectDB();
-
 // Routes
 app.use("/api/course", courseRouter);
 app.use("/api/booking", bookingRouter);
@@ -49,6 +46,14 @@ app.get("/", (req, res) => {
   res.send("API Working");
 });
 
-app.listen(port, () => {
-  console.log(`Server Started on http://localhost:${port}`);
+// Start server: connect DB first, then listen
+const startServer = async () => {
+  await connectDB();
+  app.listen(port, () => {
+    console.log(`Server Started on http://localhost:${port}`);
+  });
+};
+
+startServer().catch((err) => {
+  console.error("Failed to start server:", err);
 });
