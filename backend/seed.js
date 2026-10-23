@@ -192,6 +192,167 @@ const courses = [
         ]
       }
     ]
+  },
+  {
+    name: "React Masterclass",
+    teacher: "Sophia Miller",
+    image: "/uploads/HC1.png",
+    rating: 4.8,
+    pricingType: "paid",
+    price: { original: 200, sale: 99 },
+    overview: "Master React from fundamentals to advanced patterns. Learn hooks, state management, performance optimization, and real-world project architecture.",
+    courseType: "top",
+    category: "Development",
+    lectures: [
+      {
+        title: "Intro & Setup",
+        duration: { hours: 0, minutes: 12 },
+        chapters: [
+          { name: "Course intro", topic: "What we will build", duration: { hours: 0, minutes: 4 }, videoUrl: "https://youtu.be/sDoiClRyV_c" },
+          { name: "Environment", topic: "Node, npm, editor setup", duration: { hours: 0, minutes: 8 }, videoUrl: "https://youtu.be/4eGJp3LBLIA" }
+        ]
+      }
+    ]
+  },
+  {
+    name: "Frontend Crash Course",
+    teacher: "Ethan Brown",
+    image: "/uploads/HC2.png",
+    rating: 4.7,
+    pricingType: "free",
+    price: { original: 0, sale: 0 },
+    overview: "Accelerate your frontend development journey with HTML, CSS, and JavaScript fundamentals.",
+    courseType: "top",
+    category: "Development",
+    lectures: [
+      {
+        title: "HTML & CSS",
+        duration: { hours: 0, minutes: 30 },
+        chapters: [
+          { name: "Semantic HTML", topic: "Structure & a11y", duration: { hours: 0, minutes: 15 }, videoUrl: "https://youtu.be/6BrpMJeZuvQ" }
+        ]
+      }
+    ]
+  },
+  {
+    name: "Full Stack JavaScript",
+    teacher: "Noah Johnson",
+    image: "/uploads/HC3.png",
+    rating: 4.7,
+    pricingType: "paid",
+    price: { original: 180, sale: 89 },
+    overview: "Master full-stack JavaScript development with Node.js, Express, MongoDB, and React.",
+    courseType: "top",
+    category: "Development",
+    lectures: [
+      {
+        title: "Node & Express",
+        duration: { hours: 0, minutes: 40 },
+        chapters: [
+          { name: "Node intro", topic: "Runtime & modules", duration: { hours: 0, minutes: 20 }, videoUrl: "https://www.youtube.com/watch?v=TlB_eWDSMt4" }
+        ]
+      }
+    ]
+  },
+  {
+    name: "UX/UI Design Pro",
+    teacher: "Olivia Lee",
+    image: "/uploads/HC4.png",
+    rating: 4.9,
+    pricingType: "paid",
+    price: { original: 250, sale: 125 },
+    overview: "Transform into a professional UX/UI designer. Master design thinking, user research, wireframing, and Figma.",
+    courseType: "top",
+    category: "Design",
+    lectures: [
+      {
+        title: "Design Principles",
+        duration: { hours: 0, minutes: 30 },
+        chapters: [
+          { name: "Contrast & Hierarchy", topic: "Visual design", duration: { hours: 0, minutes: 15 }, videoUrl: "https://youtu.be/QKxTMgdsaZU" }
+        ]
+      }
+    ]
+  },
+  {
+    name: "Next.js Deep Dive",
+    teacher: "Liam Smith",
+    image: "/uploads/HC5.png",
+    rating: 4.6,
+    pricingType: "free",
+    price: { original: 0, sale: 0 },
+    overview: "Master Next.js framework with server-side rendering, static site generation, and API routes.",
+    courseType: "top",
+    category: "Development",
+    lectures: [
+      {
+        title: "Pages & Routing",
+        duration: { hours: 0, minutes: 30 },
+        chapters: [
+          { name: "App router", topic: "File-based routing", duration: { hours: 0, minutes: 15 }, videoUrl: "https://www.youtube.com/watch?v=mTz0GXj8NN0" }
+        ]
+      }
+    ]
+  },
+  {
+    name: "Python for Data Science",
+    teacher: "Isabella Brown",
+    image: "/uploads/HC6.png",
+    rating: 4.5,
+    pricingType: "free",
+    price: { original: 0, sale: 0 },
+    overview: "Start your data science journey with Python. Learn data manipulation with pandas and visualization with Matplotlib.",
+    courseType: "top",
+    category: "Data Science",
+    lectures: [
+      {
+        title: "Python & Pandas",
+        duration: { hours: 0, minutes: 40 },
+        chapters: [
+          { name: "Pandas dataframes", topic: "Data manipulation", duration: { hours: 0, minutes: 20 }, videoUrl: "https://youtu.be/O6dlFgal1Lg" }
+        ]
+      }
+    ]
+  },
+  {
+    name: "Python for Data Science (Advance)",
+    teacher: "Isabella Brown",
+    image: "/uploads/HC7.png",
+    rating: 4.5,
+    pricingType: "paid",
+    price: { original: 190, sale: 95 },
+    overview: "Advanced data science techniques including machine learning, feature engineering, and model deployment.",
+    courseType: "top",
+    category: "Data Science",
+    lectures: [
+      {
+        title: "Machine Learning Pipelines",
+        duration: { hours: 1, minutes: 0 },
+        chapters: [
+          { name: "Model evaluation", topic: "Cross validation", duration: { hours: 0, minutes: 30 }, videoUrl: "https://youtu.be/ZuHMuvIo7P4" }
+        ]
+      }
+    ]
+  },
+  {
+    name: "JavaScript (Alternate)",
+    teacher: "Noah Johnson",
+    image: "/uploads/HC8.png",
+    rating: 4.7,
+    pricingType: "paid",
+    price: { original: 180, sale: 89 },
+    overview: "Alternative fullstack curriculum focusing on TypeScript, modern testing strategies, and advanced React patterns.",
+    courseType: "top",
+    category: "Development",
+    lectures: [
+      {
+        title: "TypeScript & Testing",
+        duration: { hours: 0, minutes: 45 },
+        chapters: [
+          { name: "Unit testing", topic: "Jest & Vitest", duration: { hours: 0, minutes: 20 }, videoUrl: "https://youtu.be/I6YcroaALcw" }
+        ]
+      }
+    ]
   }
 ];
 

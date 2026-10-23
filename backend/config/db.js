@@ -5,15 +5,13 @@ export const connectDB = async () => {
 
   if (!mongoUri) {
     console.error("MONGO_URI is not set in the environment");
-    process.exit(1);
+    return;
   }
 
   try {
     await mongoose.connect(mongoUri);
-    console.log("DB connected");
+    console.log("DB connected successfully to MongoDB Atlas");
   } catch (error) {
-    console.error("DB connection error:", error);
-    process.exit(1);
+    console.error("DB connection error:", error.message || error);
   }
 };
-
